@@ -1,0 +1,78 @@
+/*===========================================
+// Typography
+//==========================================*/
+
+.grid__row:nth-child(3) {
+  @include medque(medium) {
+    @include flexify($just: space-between);
+    margin-top: 80px;
+  }
+}
+
+.link {
+  @extend %sample-link;
+}
+
+.headline {
+  &--primary {
+    @extend %headline-primary;
+  }
+  &--secondary {
+    @extend %headline-secondary;
+  }
+}
+
+.card {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  @include medque(medium) {
+    margin-bottom: 0;
+  }
+  p {
+    font-family: $stack-open-sans;
+    margin-bottom: 0;
+    line-height: 28px;
+    text-align: left;
+    @include medque(medium) {
+      font-size: 15px;
+      margin-top: 40px;
+    }
+    @include medque(xlarge) {
+      margin-right: 70px;
+      margin-left: 10px;
+    }
+    &:first-child {
+      font-size: 16px;
+      @include medque(xlarge) {
+        margin-top: 70px;
+        margin-bottom: 100px;
+      }
+    }
+  }
+  &:last-child {
+    @include medque(medium) {
+      margin-top: 0;
+    }
+  }
+}
+
+.blockquote {
+  font-family: $stack-open-sans;
+  color: $color-block;
+  font-size: 23px;
+  font-style: italic;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  border-left: 7px solid $color-nav;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  @include medque(medium) {
+    font-size: 22px;
+  }
+  @include medque(xlarge) {
+    margin-right: 90px;
+    margin-left: 45px;
+  }
+}

@@ -1,0 +1,31 @@
+/*===========================================
+// Images
+//==========================================*/
+
+.grid__row:nth-child(5) {
+  @include medque(medium) {
+    @include flexify($just: space-between);
+  }
+}
+.grid__col--6 {
+  @include medque(medium) {
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+}
+
+.img {
+  &--logo {
+    @extend %img-logo;
+    @extend %center;
+  }
+  &--frame {
+    @extend %img-frame;
+    @extend %center;
+  }
+  &--avatar {
+    @extend %img-avatar;
+    @extend %center;
+  }
+}

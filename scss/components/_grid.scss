@@ -1,0 +1,91 @@
+/*===========================================
+// Grid System
+//==========================================*/
+
+.container {
+  font-family: $stack-open-sans;
+}
+
+// Calculate grid columns
+@include medque(medium) {
+  @for $i from 1 through $grid-col-pieces {
+    $context: grid-context($grid-col-w, $grid-col-pieces, $grid-space-w) !global;
+    $target: ($grid-col-w * $i) + ($grid-space-w * ($i - 1));
+
+    // Grid column class generator (1 through 12)
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+
+.grid__col {
+
+  //Loop for grid background colors and styling
+  @include grid-background-style;
+}
+
+// Styling the grid columns
+[class^="grid__col--"] {
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @include medque(medium) {
+    @include amp-times-two(percentage($grid-space-w / $context));
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 1px;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+
+.grid {
+  @extend %center;
+  width: 90%;
+
+  //Set a max width for grid container
+  @include medque(large) {
+    max-width: $grid-max-w;
+  }
+}
+
+//Targets all but the grid system, sets the width
+.grid__row {
+  width: 85%;
+  @extend %center;
+  @include medque(medium) {
+    width: 80%;
+  }
+
+  //Targets the grid system, sets the width
+  &:nth-child(1n+8) {
+    width: 90%;
+    @include medque(medium) {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  &:last-child {
+    @include medque(medium) {
+      @include flexify($just: center);
+      margin-bottom: 100px;
+    }
+  }
+}
+
+//Added larger space between the grid columns for mobile width
+.grid__col-- {
+  @include medque(small) {
+    &12.theme__colors,
+    &6.theme__colors:last-of-type,
+    &4.theme__colors:last-of-type,
+    &3.theme__colors:last-of-type,
+    &7.theme__colors:last-of-type {
+      margin-bottom: $marg-big-grid;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+/*===========================================
+// Placeholders
+//==========================================*/
+
+// Button style
+%btn {
+  width: 100%;
+  display: block;
+  color: $white;
+  padding: 10px 0;
+  margin: 20px 0 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: $br-main;
+  cursor: pointer;
+}
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Center
+%center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+// Links
+%sample-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $c-default;
+}
+
+%nav-links {
+  text-decoration: none;
+  text-align: center;
+  color: $black;
+  padding: 17px 0;
+  display: block;
+  @include medque(medium) {
+      display: inline;
+      padding: 10px;
+    }
+}
+
+%links-hover {
+  background-color: $color-nav;
+  color: $white;
+  padding: 17px 0;
+  border-radius: $br-main;
+  transition: .4s;
+  transition-property: background-color;
+  @include medque(medium) {
+      padding: 10px;
+  }
+}
+
+// Images
+%img-logo {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: block;
+  @include medque(medium) {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+}
+
+%img-frame {
+  display: block;
+  border: 1px solid $gray-frame;
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  @include medque(medium) {
+    width: 100%;
+    height: initial;
+    margin-bottom: 0;
+  }
+  @include medque(xlarge) {
+    width: initial;
+  }
+}
+
+%img-avatar {
+  display: block;
+  width: 50%;
+  height: 40%;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 60px;
+  }
+  @include medque(medium) {
+    margin-bottom: 30px;
+    &:last-child {
+      width: 50%;
+      height: initial;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @include medque(xlarge) {
+    &:last-child {
+      width: initial;
+      margin-top: 10px;
+    }
+  }
+}
+
+//Headlines
+%headline-primary {
+  padding-left: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: $color-nav;
+  @include medque(medium) {
+      margin-top: 30px;
+      margin-left: 20px;
+  }
+  & ~ p {
+    font-size: 17px;
+    @include medque(medium) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+%headline-secondary {
+  font-family: $stack-quicksand;
+  text-align: left;
+  width: 85%;
+  font-weight: 100;
+  font-size: 18px;
+  margin-bottom: 15px;
+  &:first-child {
+      margin-top: 0;
+      margin-left: 0;
+      @include medque(medium) {
+        margin-left: 25px;
+      }
+  }
+  &:nth-child(1n+3) {
+    width: 85%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    @extend %center;
+    @include medque(medium) {
+      width: 80%;
+      margin-top: 40px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+//Nav items
+%nav-items {
+  margin: 5px 0 5px 0;
+  width: 100%;
+  @include medque(medium) {
+    display: inline;
+    margin: 0 0 0 10px;
+  }
+  @include medque(xlarge) {
+    margin: 0 10px 0 10px;
+  }
+}

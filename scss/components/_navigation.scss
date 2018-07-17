@@ -1,0 +1,38 @@
+/*===========================================
+// Navigation
+//==========================================*/
+
+.grid__row:first-child {
+    @include medque(medium) {
+      @include flexify($just: space-between);
+  }
+}
+.grid__col--3:first-child {
+    @include medque(medium) {
+      margin-left: 0;
+  }
+}
+
+// Navigation
+.nav {
+  padding-left: 0;
+  margin-bottom: 100px;
+  @include medque(medium) {
+    margin-top: 80px;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-align: center;
+  @include medque(xlarge) {
+    margin-right: 10px;
+  }
+    }
+    &__item {
+      @extend %nav-items;
+      a {
+        @extend %nav-links;
+      }
+      a:hover {
+        @extend %links-hover;
+    }
+  }
+}

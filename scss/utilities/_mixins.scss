@@ -1,0 +1,78 @@
+/*===========================================
+// Mixins
+//==========================================*/
+
+// Targets all but the first column in every column row.
+@mixin amp-times-two($margin: 16px) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+// Loop through the grid, main styling
+@mixin grid-background-style {
+  @each $theme, $color in $theme-colors {
+    &--#{$theme}.theme__colors {
+      background: $color;
+      border-radius: $br-main;
+      padding: $grid-col-padding-main;
+      font-size: 12px;
+      font-weight: bold;
+      color: $color-gridsys;
+    }
+  }
+}
+
+// Loop through the buttons, styling them
+@mixin btn-background-syle($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      background: $color;
+      &:hover {
+        opacity: .8;
+      }
+      @extend %btn;
+    }
+  }
+}
+
+// Flexbox containers
+@mixin flexify(
+  $disp: flex,
+  $dir: null,
+  $just: null,
+  $wrap: null ) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    flex-wrap: $wrap;
+}
+
+// Media Queries mixxin
+@mixin medque($break) {
+  @if $break == "small" {
+    @media (min-width: $mq-xxs) and
+     (max-width: $mq-m) {
+       @content;
+     }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $mq-m + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $mq-l) {
+      @content;
+    }
+  }
+  @else if $break == "xlarge" {
+    @media (min-width: $mq-xl) {
+      @content;
+    }
+  }
+  @else {
+    @error "Something went wrong! `#{$break}` Media query don't work properly."
+  }
+}

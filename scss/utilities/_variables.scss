@@ -1,0 +1,73 @@
+/*===========================================
+// Variables
+//==========================================*/
+
+// Main Colors
+$black              : #000;
+$white              : #fff;
+$gray               : gray;
+$gray-frame         : lightgrey;
+$color-nav          : #59d6c8; // Viking
+$color-block        : #818181; // gray, blockquote
+$color-gridsys      : #808181; // gray text for grid system 
+
+// Button Colors
+$c-default          : #51ddfc;
+$c-success          : #63cc82;
+$c-error            : #e4757a;
+$c-warning          : #fd7856;
+$c-info             : #927bc1;
+
+// Color Grid Columns
+$grid-bg-3          : #deb2ee; // French Lilac
+$grid-bg-4          : #7ee6fd; // Anakiwa
+$grid-bg-5          : #88d9a0; // Vista Blue
+$grid-bg-6          : #3fabca; // Shakespeare
+$grid-bg-7          : #ec9fa3; // Sea Pink
+$grid-bg-8          : #fd9f85; // Vivid Tangerine
+$grid-bg-12         : #80e8d1; // Riptide
+
+// Theme Colors Loop
+$theme-colors: (
+  '3'               : $grid-bg-3,
+  '4'               : $grid-bg-4,
+  '5'               : $grid-bg-5,
+  '6'               : $grid-bg-6,
+  '7'               : $grid-bg-7,
+  '8'               : $grid-bg-8,
+  '12'              : $grid-bg-12
+);
+
+// Button Colors Loop
+$button-colors: (
+  'default'         : $c-default,
+  'success'         : $c-success,
+  'error'           : $c-error,
+  'warning'         : $c-warning,
+  'info'            : $c-info,
+);
+
+// Font Stack
+$stack-open-sans: 'Open Sans', sans-serif;
+$stack-quicksand: 'Quicksand', sans-serif;
+
+// Border Radius
+$br-main: 5px;
+
+// Bottom margin grid system, mobile
+$marg-small-grid: 8px;
+$marg-big-grid: 50px;
+$grid-col-padding-main: 12px 15px;
+
+// Media Query Breakpoints
+$mq-xxs:  1px;
+$mq-xs:   480px;
+$mq-m:    768px;
+$mq-l:    1100px;
+$mq-xl:   1400px;
+
+// Grid system
+$grid-col-w: 65px;
+$grid-space-w: 20px;
+$grid-col-pieces: 12;
+$grid-max-w: 1050px;

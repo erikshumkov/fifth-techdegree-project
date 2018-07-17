@@ -1,0 +1,35 @@
+/*===========================================
+// Buttons
+//==========================================*/
+
+.grid__row:nth-child(7) {
+  margin-top: 70px;
+  @include medque(medium) {
+    @include flexify($dir: column);
+    margin-top: 0;
+  }
+}
+
+.grid__row:nth-child(7) > .grid__col--12 {
+  @include medque(medium) {
+    @include flexify($just: space-around, $dir: row);
+  }
+}
+
+.btn {
+  @include btn-background-syle($button-colors);
+  @include medque(medium) {
+    &--default:first-child,
+    &--success,
+    &--warning,
+    &--error,
+    &--info {
+      margin-left: 10px;
+      margin-right: 10px;
+      @include medque(xlarge) {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+  }
+}

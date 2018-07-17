@@ -1,0 +1,35 @@
+/*===========================================
+// Forms
+//==========================================*/
+
+.grid__col--4 {
+  @include medque(medium) {
+    width: 35%;
+  }
+}
+
+.form {
+  legend:first-child {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 20px;
+    @include medque(xlarge) {
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    @extend %center;
+    display: block;
+    width: 93%;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 5px solid $color-nav;
+    outline: none;
+    margin-bottom: 30px;
+  }
+  &__label--hidden {
+    display: none;
+  }
+}

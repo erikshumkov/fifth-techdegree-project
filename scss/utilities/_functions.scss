@@ -1,0 +1,9 @@
+/*===========================================
+// Functions
+//==========================================*/
+
+// Set the grid "context" width
+@function grid-context($grid-col-w, $grid-col-pieces, $grid-space-w) {
+  $grid-context: ($grid-col-w * $grid-col-pieces) + ($grid-space-w * ($grid-col-pieces - 1));
+  @return $grid-context;
+}
