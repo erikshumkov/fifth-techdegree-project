@@ -9,7 +9,7 @@ $gray               : gray;
 $gray-frame         : lightgrey;
 $color-nav          : #59d6c8; // Viking
 $color-block        : #818181; // gray, blockquote
-$color-gridsys      : #808181; // gray text for grid system 
+$color-gridsys      : #808181; // gray text for grid system
 
 // Button Colors
 $c-default          : #51ddfc;
@@ -55,19 +55,19 @@ $stack-quicksand: 'Quicksand', sans-serif;
 $br-main: 5px;
 
 // Bottom margin grid system, mobile
-$marg-small-grid: 8px;
-$marg-big-grid: 50px;
-$grid-col-padding-main: 12px 15px;
+$marg-small-grid        : 8px;
+$marg-big-grid          : 50px;
+$grid-col-padding-main  : 12px 15px;
 
 // Media Query Breakpoints
-$mq-xxs:  1px;
-$mq-xs:   480px;
-$mq-m:    768px;
-$mq-l:    1100px;
-$mq-xl:   1400px;
+$mq-xxs   : 1px;
+$mq-xs    : 480px;
+$mq-m     : 768px;
+$mq-l     : 1100px;
+$mq-xl    : 1400px;
 
 // Grid system
-$grid-col-w: 65px;
-$grid-space-w: 20px;
-$grid-col-pieces: 12;
-$grid-max-w: 1050px;
+$grid-col-w         : 65px;
+$grid-space-w       : 20px;
+$grid-col-pieces    : 12;
+$grid-max-w         : 1050px;

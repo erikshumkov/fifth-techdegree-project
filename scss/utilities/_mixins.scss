@@ -2,6 +2,8 @@
 // Mixins
 //==========================================*/
 
+// Double ampersand mixin from Treehouse SASS course.
+
 // Targets all but the first column in every column row.
 @mixin amp-times-two($margin: 16px) {
   & + & {
@@ -48,6 +50,8 @@
     justify-content: $just;
     flex-wrap: $wrap;
 }
+
+// Media Queries mixin from Treehouse SASS course. 
 
 // Media Queries mixxin
 @mixin medque($break) {

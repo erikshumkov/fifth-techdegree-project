@@ -24,11 +24,9 @@
     &--warning,
     &--error,
     &--info {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 0 10px 0 10px;
       @include medque(xlarge) {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin: 0 30px 0 30px;
       }
     }
   }

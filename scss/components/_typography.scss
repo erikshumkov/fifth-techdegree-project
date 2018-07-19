@@ -23,8 +23,7 @@
 }
 
 .card {
-  margin-top: 80px;
-  margin-bottom: 100px;
+  margin: 80px 0 100px 0;
   @include medque(medium) {
     margin-bottom: 0;
   }
@@ -38,14 +37,12 @@
       margin-top: 40px;
     }
     @include medque(xlarge) {
-      margin-right: 70px;
-      margin-left: 10px;
+      margin: 40px 70px 0 10px;
     }
     &:first-child {
       font-size: 16px;
       @include medque(xlarge) {
-        margin-top: 70px;
-        margin-bottom: 100px;
+        margin: 70px 70px 100px 10px;
       }
     }
   }
@@ -61,9 +58,7 @@
   color: $color-block;
   font-size: 23px;
   font-style: italic;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px;
+  margin: 23px 20px 40px 20px;
   padding-left: 30px;
   border-left: 7px solid $color-nav;
   border-top-left-radius: 4px;
@@ -72,7 +67,6 @@
     font-size: 22px;
   }
   @include medque(xlarge) {
-    margin-right: 90px;
-    margin-left: 45px;
+    margin: 22px 90px 40px 45px;
   }
 }
